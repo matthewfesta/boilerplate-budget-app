@@ -5,8 +5,14 @@ class Category:
         self.name = name
 
     def deposit(self, amount, description):
-        if description == None:
-            description = ""
+        # Validate Amount and Description
+        try:
+            amount = float(amount)
+        except:
+            raise ValueError('Amount must be a number');
+        else:
+            amount = float(amount)
+            
 
         
 
